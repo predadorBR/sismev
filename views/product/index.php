@@ -41,7 +41,7 @@ $gridColumns = [
     ],
     [
         'attribute' => 'amount',
-        'format' => 'amount',
+        //'format' => 'amount',
         'filterType' => GridView::FILTER_NUMBER, 
         'filterWidgetOptions' => [
             'maskedInputOptions' => [

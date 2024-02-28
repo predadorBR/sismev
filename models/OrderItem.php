@@ -61,7 +61,9 @@ class OrderItem extends ActiveRecord
                 'message' => Yii::t('app', 'This product has already been placed in the order.')
             ],
             [['amount', 'unit_price', 'order_id', 'product_id'], 'required'],
-            [['amount', 'unit_price', 'total'], DecimalValidator::class],
+            //[['amount', 'unit_price', 'total'], DecimalValidator::class],
+            [['amount'], 'integer'],
+            [['unit_price', 'total'], DecimalValidator::class],
             [['amount'], ProductOutputValidator::class, 'when' => function ($model) {
                 return $model->product_id;
             }],

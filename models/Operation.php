@@ -79,7 +79,8 @@ class Operation extends ActiveRecord
             [['in_out', 'amount', 'reason', 'product_id', 'employee_id'], 'required'],
             [['in_out', 'product_id', 'employee_id', 'is_deleted'], 'integer'],
             [['in_out'], 'default', 'value' => 1],
-            [['amount'], DecimalValidator::class],
+            //[['amount'], DecimalValidator::class],
+            [['amount'], 'integer'],
             [['amount'], 'validateProductAmountMax', 'when' => function ($model) {
                 return $model->in_out == 1 && $model->product_id;
             }],

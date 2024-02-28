@@ -13,7 +13,7 @@ AxiosAsset::register($this);
 $this->registerJs(
     <<< 'JS'
         function getZipcode(code) {
-            axios.get('/api/address',{
+            axios.get('/web/api/address',{
                 params: { code: code }
             }).then(function (response) {
                 const data = response.data;

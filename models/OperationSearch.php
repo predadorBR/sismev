@@ -27,7 +27,8 @@ class OperationSearch extends Operation
     {
         return [
             [['id', 'in_out', 'employee_id', 'setting_amount', 'setting_product'], 'integer'],
-            [['amount'], 'number'],
+            [['amount'], 'integer'],
+            //[['amount'], 'number'],
             [['reason', 'range_date', 'view_operations', 'product_id'], 'safe'],
         ];
     }
